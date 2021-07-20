@@ -29,8 +29,12 @@ end_game = False
 while not end_game:
     screen.update()
     time.sleep(0.1)
-    for snake_part in snake_parts:
-        snake_part.forward(10)
+    for snake_part in range(len(snake_parts) - 1, 0, -1):
+        new_x_cor = snake_parts[snake_part-1].xcor()
+        new_y_cor = snake_parts[snake_part - 1].ycor()
+        snake_parts[snake_part].goto(new_x_cor, new_y_cor)
+    snake_parts[0].forward(20)
+    snake_parts[0].left(90)
 
 
 
