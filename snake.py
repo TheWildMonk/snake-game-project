@@ -1,10 +1,17 @@
 from turtle import Turtle
 
+SNAKE_MOVEMENT = 20
+UP = 90
+DOWN = 270
+RIGHT = 0
+LEFT = 180
+
 
 class Snake:
     def __init__(self):
         self.snake_body = []
         self.create_snake()
+        self.head = self.snake_body[0]
 
     def create_snake(self):
         turtle_object = Turtle("square")
@@ -23,4 +30,20 @@ class Snake:
             new_x_cor = self.snake_body[snake_part - 1].xcor()
             new_y_cor = self.snake_body[snake_part - 1].ycor()
             self.snake_body[snake_part].goto(new_x_cor, new_y_cor)
-        self.snake_body[0].forward(20)
+        self.head.forward(SNAKE_MOVEMENT)
+
+    def up(self):
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
+
+    def down(self):
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
+
+    def right(self):
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
+
+    def left(self):
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)

@@ -12,6 +12,14 @@ screen.tracer(0)
 # Create snake object
 snake = Snake()
 
+# User control
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+# Run the game
 end_game = False
 while not end_game:
     screen.update()
@@ -28,5 +36,5 @@ while not end_game:
 
 
 
-
+# Screen exit
 screen.exitonclick()
