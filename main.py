@@ -50,15 +50,5 @@ while not end_game:
             end_game = True
             score.game_over()
 
-
-
-
-
-
-
-
-
-
-
 # Screen exit
 screen.exitonclick()
