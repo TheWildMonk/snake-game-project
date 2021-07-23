@@ -43,8 +43,10 @@ while not end_game:
         end_game = True
         score.game_over()
 
-    for each_seg in snake.snake_body[1:]:
-        if snake.head.distance(each_seg) < 10:
+    for each_seg in snake.snake_body:
+        if snake.head == each_seg:
+            pass
+        elif snake.head.distance(each_seg) < 10:
             end_game = True
             score.game_over()
 

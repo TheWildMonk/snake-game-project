@@ -25,6 +25,16 @@ class Snake:
             x_cor -= 20
         turtle_object.hideturtle()
 
+    def add_segment(self):
+        turtle_object = Turtle("square")
+        turtle_object.color("white")
+        turtle_object.penup()
+        extended_part = turtle_object.clone()
+        turtle_object.hideturtle()
+        last_position = self.snake_body[-1].position()
+        extended_part.goto(last_position)
+        self.snake_body.append(extended_part)
+
     def move(self):
         for snake_part in range(len(self.snake_body) - 1, 0, -1):
             new_x_cor = self.snake_body[snake_part - 1].xcor()
