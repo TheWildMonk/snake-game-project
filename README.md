@@ -7,5 +7,5 @@ Turtle graphics <br />
 ### <u>**Project:**</u> <br />
 Snake Game Project<br />
 100 Days of Code - The Complete Python Pro Bootcamp 2021 <br />
-Day 20 - Intermediate - Build the Snake Game Part 1: Animation & Coordinates
+Day 20 - Intermediate - Build the Snake Game Part 1: Animation & Coordinates <br />
 Day 21 - Intermediate - Build the Snake Game Part 2: Inheritance & List Slicing
