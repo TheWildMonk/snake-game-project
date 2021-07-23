@@ -10,7 +10,6 @@ screen.tracer(0)
 
 # Snake object definition
 snake = Snake()
-print(snake.snake_body)
 
 end_game = False
 while not end_game:

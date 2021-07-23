@@ -1,5 +1,7 @@
 from turtle import Turtle
 
+SNAKE_MOVEMENT = 20
+
 
 class Snake:
     def __init__(self):
@@ -20,7 +22,8 @@ class Snake:
         snake_object.hideturtle()
 
     def move(self):
-        for each_seg in range(len(self.snake_body) - 1, 0, 1):
+        for each_seg in range(len(self.snake_body) - 1, 0, -1):
             new_x_cor = self.snake_body[each_seg - 1].xcor()
             new_y_cor = self.snake_body[each_seg - 1].ycor()
             self.snake_body[each_seg].goto(new_x_cor, new_y_cor)
+        self.head.forward(SNAKE_MOVEMENT)
