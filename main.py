@@ -39,14 +39,12 @@ while not end_game:
         game_speed -= 0.005
 
     # Detect collision with wall
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 280 or snake.head.xcor() < -300 or snake.head.ycor() > 280 or snake.head.ycor() < -300:
         end_game = True
         score.game_over()
 
-    for each_seg in snake.snake_body:
-        if each_seg == snake.head:
-            pass
-        elif snake.head.distance(each_seg) < 10:
+    for each_seg in snake.snake_body[1:]:
+        if snake.head.distance(each_seg) < 10:
             end_game = True
             score.game_over()
 
