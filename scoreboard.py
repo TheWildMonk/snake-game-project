@@ -8,6 +8,7 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.total_score = 0
+        self.high_score = 0
         self.color("white")
         self.speed("fastest")
         self.penup()
