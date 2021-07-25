@@ -7,7 +7,7 @@ import time
 # Screen attributes
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.bgcolor("black")
+screen.bgcolor("#2c2c54")
 screen.title("The Snake Game")
 screen.tracer(0)
 

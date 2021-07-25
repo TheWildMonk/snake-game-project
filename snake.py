@@ -15,7 +15,7 @@ class Snake:
 
     def create_snake(self):
         turtle_object = Turtle("square")
-        turtle_object.color("white")
+        turtle_object.color("#f7f1e3")
         turtle_object.penup()
         x_cor = 0
         for _ in range(3):
@@ -27,7 +27,7 @@ class Snake:
 
     def add_segment(self):
         turtle_object = Turtle("square")
-        turtle_object.color("white")
+        turtle_object.color("#f7f1e3")
         turtle_object.penup()
         extended_part = turtle_object.clone()
         turtle_object.hideturtle()
