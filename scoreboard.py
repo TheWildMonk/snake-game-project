@@ -17,13 +17,19 @@ class Scoreboard(Turtle):
         self.hideturtle()
 
     def update_score(self):
-        self.write(f"SCORE: {self.total_score}", align=ALIGNMENT, font=FONT)
+        self.clear()
+        self.write(f"SCORE: {self.total_score} HIGH SCORE: {self.high_score}", align=ALIGNMENT, font=FONT)
 
-    def game_over(self):
-        self.home()
-        self.write("GAME OVER!", align=ALIGNMENT, font=FONT)
+    def reset_score(self):
+        if self.total_score > self.high_score:
+            self.high_score = self.total_score
+        self.total_score = 0
+        self.update_score()
+
+    # def game_over(self):
+    #     self.home()
+    #     self.write("GAME OVER!", align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
         self.total_score += 1
-        self.clear()
         self.update_score()
